@@ -27,11 +27,6 @@
             <artifactId>websocket-client</artifactId>
             <version>${jetty_version}</version>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.5</version>
-        </dependency>
 
         <!-- Needed for Email subscriptions -->
         <dependency>
@@ -140,9 +135,20 @@
 
         <!-- This example uses H2 embedded database. If you are using another database such as Mysql or Oracle, you may omit the following dependencies and replace them with an appropriate database client
             dependency for your database platform. -->
+        
+        <!--  
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+        </dependency>
+        -->
+
+        <dependency>
+        <groupId>com.intersystems</groupId>
+        <artifactId>intersystems-jdbc</artifactId>
+        <version>3.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/src/main/resources/intersystems-jdbc-3.0.0.jar</systemPath>
         </dependency>
 
         <!-- The following dependencies are only needed for automated unit tests, you do not neccesarily need them to run the example. -->
